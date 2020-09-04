@@ -40,7 +40,10 @@ namespace SharedMailboxes
 
         private String generateStringMailbox()
         {
-            return Script1a + Script1b + Script1c + textBox1.Text  + "'" + Script1d + Script1c + textBox1.Text +
+            if (radioButton31.Checked || radioButton32.Checked || radioButton33.Checked)
+                textBox3.Text = generateStringDistGroup();
+            
+            return Script1a + Script1b + Script1c + textBox1.Text + "'" + Script1d + Script1c + textBox1.Text +
                 "'" + Script1e + Script1f + Script1g + Script1c + textBox1.Text + "@caritas-brilon-wfb.de'" +
                 "-SamAccountName '" + Script1c + textBox1.Text + "' -FirstName '' -Initials '' -LastName '' " +
                 "-Database '" + Script1h + Script1i;
@@ -94,6 +97,8 @@ namespace SharedMailboxes
                 Script1i = "-Equipment";
                 Script2b = "EFg_Kalender_";
                 textBox2.Text = generateStringMailbox();
+                if (radioButton31.Checked || radioButton32.Checked || radioButton33.Checked)
+                    textBox3.Text = generateStringDistGroup();
             }
         }
 
