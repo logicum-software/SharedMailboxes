@@ -6,6 +6,7 @@ namespace SharedMailboxes
 {
     public partial class Form1 : Form
     {
+        // Script1 -> Erstellung eines Postfachs
         private String Script1a = "New-Mailbox -Name '";
         private String Script1b = "Raum ";
         private String Script1c = "WfbM-MW_";
@@ -16,10 +17,20 @@ namespace SharedMailboxes
         private String Script1h = "MBDB_EX2014_L-Z' ";
         private String Script1i = "-Room";
 
+        // Script2 -> Erstellung der Freigabegruppen
+        private String Script2a = "New-DistributionGroup -Name '";
+        private String Script2b = "'EFg_Raum-";
+        //private String Script2c = "WfbM-MW_";
+        private String Script2d = "_Author'";
+        private String Script2e = " -Type 'Security' -OrganizationalUnit " +
+            "'caritas-brilon-wfb.de/04_Gruppen/41_Exchange-Freigabegruppen_EFg' -SamAccountName ";
+        private String Script2f = " -Alias ";
+
+
         public Form1()
         {
             InitializeComponent();
-            textBox2.Text = generateString();
+            textBox2.Text = generateStringMailbox();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -27,7 +38,7 @@ namespace SharedMailboxes
             Close();
         }
 
-        private String generateString()
+        private String generateStringMailbox()
         {
             return Script1a + Script1b + Script1c + textBox1.Text  + "'" + Script1d + Script1c + textBox1.Text +
                 "'" + Script1e + Script1f + Script1g + Script1c + textBox1.Text + "@caritas-brilon-wfb.de'" +
@@ -35,10 +46,16 @@ namespace SharedMailboxes
                 "-Database '" + Script1h + Script1i;
         }
 
+        private String generateStringDistGroup()
+        {
+            return Script2a + Script2b + Script1c + textBox1.Text + Script2d + Script2e + Script2b + Script1c +
+                Script2d + Script2f + Script2b + Script1c + textBox1.Text + Script2d;
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             //Script1e = Script1b + label2.Text + "'";
-            textBox2.Text = generateString();
+            textBox2.Text = generateStringMailbox();
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
@@ -49,7 +66,8 @@ namespace SharedMailboxes
                 Script1f = "'caritas-brilon-wfb.de/03_User/75_Geraetepostfaecher'";
                 Script1h = "MBDB_EX2014_A-K' ";
                 Script1i = "-Equipment";
-                textBox2.Text = generateString();
+                Script2b = "EFg_Fzg_";
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -61,7 +79,8 @@ namespace SharedMailboxes
                 Script1f = "'caritas-brilon-wfb.de/03_User/74_Raumpostfach_Raumkalender'";
                 Script1h = "MBDB_EX2014_L-Z' ";
                 Script1i = "-Room";
-                textBox2.Text = generateString();
+                Script2b = "EFg_Raum-";
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -73,7 +92,8 @@ namespace SharedMailboxes
                 Script1f = "'caritas-brilon-wfb.de/03_User/75_Geraetepostfaecher'";
                 Script1h = "MBDB_EX2014_A-K' ";
                 Script1i = "-Equipment";
-                textBox2.Text = generateString();
+                Script2b = "EFg_Kalender_";
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -82,7 +102,7 @@ namespace SharedMailboxes
             if (radioButton4.Checked)
             {
                 Script1c = "WfbM-MW_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -91,7 +111,7 @@ namespace SharedMailboxes
             if (radioButton5.Checked)
             {
                 Script1c = "WfbM-HG_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -100,7 +120,7 @@ namespace SharedMailboxes
             if (radioButton6.Checked)
             {
                 Script1c = "WfbM-IDL1_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -109,7 +129,7 @@ namespace SharedMailboxes
             if (radioButton7.Checked)
             {
                 Script1c = "WfbM-IDL2_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -118,7 +138,7 @@ namespace SharedMailboxes
             if (radioButton8.Checked)
             {
                 Script1c = "WfbM-MSB_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -127,7 +147,7 @@ namespace SharedMailboxes
             if (radioButton9.Checked)
             {
                 Script1c = "WfbM-WTB_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -136,7 +156,7 @@ namespace SharedMailboxes
             if (radioButton10.Checked)
             {
                 Script1c = "WH-HH_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -145,7 +165,7 @@ namespace SharedMailboxes
             if (radioButton11.Checked)
             {
                 Script1c = "WH-EH_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -154,7 +174,7 @@ namespace SharedMailboxes
             if (radioButton12.Checked)
             {
                 Script1c = "WH-NH_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -163,7 +183,7 @@ namespace SharedMailboxes
             if (radioButton13.Checked)
             {
                 Script1c = "WH-DEH_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -172,7 +192,7 @@ namespace SharedMailboxes
             if (radioButton14.Checked)
             {
                 Script1c = "WH-LH_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -181,7 +201,7 @@ namespace SharedMailboxes
             if (radioButton15.Checked)
             {
                 Script1c = "WH-HN_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -190,7 +210,7 @@ namespace SharedMailboxes
             if (radioButton16.Checked)
             {
                 Script1c = "AKH-SOZ-BRI_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -199,7 +219,7 @@ namespace SharedMailboxes
             if (radioButton17.Checked)
             {
                 Script1c = "AKH-SOZ-MSB_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -208,7 +228,7 @@ namespace SharedMailboxes
             if (radioButton18.Checked)
             {
                 Script1c = "AKH-SOZ-OLB_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -217,7 +237,7 @@ namespace SharedMailboxes
             if (radioButton19.Checked)
             {
                 Script1c = "AKH-SOZ-WTB_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -226,7 +246,7 @@ namespace SharedMailboxes
             if (radioButton20.Checked)
             {
                 Script1c = "AKH-SOZ-HLB_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -235,7 +255,7 @@ namespace SharedMailboxes
             if (radioButton21.Checked)
             {
                 Script1c = "AKH-SOZ-MDB_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -244,7 +264,7 @@ namespace SharedMailboxes
             if (radioButton25.Checked)
             {
                 Script1c = "AKH-HNR_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
 
         }
@@ -254,7 +274,7 @@ namespace SharedMailboxes
             if (radioButton22.Checked)
             {
                 Script1c = "AKH-TPH_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -263,7 +283,7 @@ namespace SharedMailboxes
             if (radioButton23.Checked)
             {
                 Script1c = "AKH-STE_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -272,7 +292,7 @@ namespace SharedMailboxes
             if (radioButton24.Checked)
             {
                 Script1c = "AKH-STJ_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -281,7 +301,7 @@ namespace SharedMailboxes
             if (radioButton26.Checked)
             {
                 Script1c = "MKK-WTB_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -290,7 +310,7 @@ namespace SharedMailboxes
             if (radioButton27.Checked)
             {
                 Script1c = "MKK-BW_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -299,7 +319,7 @@ namespace SharedMailboxes
             if (radioButton28.Checked)
             {
                 Script1c = "BH-ABW-BRI_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -308,7 +328,7 @@ namespace SharedMailboxes
             if (radioButton29.Checked)
             {
                 Script1c = "BH-ABW-WTB_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
             }
         }
 
@@ -317,7 +337,34 @@ namespace SharedMailboxes
             if (radioButton30.Checked)
             {
                 Script1c = "GS_";
-                textBox2.Text = generateString();
+                textBox2.Text = generateStringMailbox();
+            }
+        }
+
+        private void radioButton31_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton31.Checked)
+            {
+                Script2d = "_Author'";
+                textBox3.Text = generateStringDistGroup();
+            }
+        }
+
+        private void radioButton32_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton32.Checked)
+            {
+                Script2d = "_Editor'";
+                textBox3.Text = generateStringDistGroup();
+            }
+        }
+
+        private void radioButton33_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton33.Checked)
+            {
+                Script2d = "_Reviewer'";
+                textBox3.Text = generateStringDistGroup();
             }
         }
     }
