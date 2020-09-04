@@ -19,12 +19,17 @@ namespace SharedMailboxes
 
         // Script2 -> Erstellung der Freigabegruppen
         private String Script2a = "New-DistributionGroup -Name '";
-        private String Script2b = "'EFg_Raum-";
+        private String Script2b = "EFg_Raum-";
         //private String Script2c = "WfbM-MW_";
-        private String Script2d = "_Author'";
+        private String Script2d = "Author";
         private String Script2e = " -Type 'Security' -OrganizationalUnit " +
             "'caritas-brilon-wfb.de/04_Gruppen/41_Exchange-Freigabegruppen_EFg' -SamAccountName ";
         private String Script2f = " -Alias ";
+
+        // Script3 -> Zuweisung der Berechtigungen
+        private String Script3a = "Add-MailboxFolderPermission ";
+        private String Script3b = " -User ";
+        private String Script3c = " -AccessRights ";
 
 
         public Form1()
@@ -41,7 +46,10 @@ namespace SharedMailboxes
         private String generateStringMailbox()
         {
             if (radioButton31.Checked || radioButton32.Checked || radioButton33.Checked)
+            {
                 textBox3.Text = generateStringDistGroup();
+                textBox4.Text = generateAddPermission();
+            }
             
             return Script1a + Script1b + Script1c + textBox1.Text + "'" + Script1d + Script1c + textBox1.Text +
                 "'" + Script1e + Script1f + Script1g + Script1c + textBox1.Text + "@caritas-brilon-wfb.de'" +
@@ -51,8 +59,15 @@ namespace SharedMailboxes
 
         private String generateStringDistGroup()
         {
-            return Script2a + Script2b + Script1c + textBox1.Text + Script2d + Script2e + Script2b + Script1c +
-                Script2d + Script2f + Script2b + Script1c + textBox1.Text + Script2d;
+            return Script2a + Script2b + Script1c + textBox1.Text + "_" + Script2d + "'" +
+                Script2e + Script2b + Script1c + "_" + Script2d + Script2f + Script2b + Script1c +
+                textBox1.Text + "_" + Script2d;
+        }
+
+        private String generateAddPermission()
+        {
+            return Script3a + "'" + Script1c + textBox1.Text + ":\\Kalender'" + Script3b + "'" + Script2b + Script1c +
+                textBox1.Text + "_" + Script2d + "'" + Script3c + Script2d;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -350,8 +365,9 @@ namespace SharedMailboxes
         {
             if (radioButton31.Checked)
             {
-                Script2d = "_Author'";
+                Script2d = "Author";
                 textBox3.Text = generateStringDistGroup();
+                textBox4.Text = generateAddPermission();
             }
         }
 
@@ -359,8 +375,9 @@ namespace SharedMailboxes
         {
             if (radioButton32.Checked)
             {
-                Script2d = "_Editor'";
+                Script2d = "Editor";
                 textBox3.Text = generateStringDistGroup();
+                textBox4.Text = generateAddPermission();
             }
         }
 
@@ -368,8 +385,9 @@ namespace SharedMailboxes
         {
             if (radioButton33.Checked)
             {
-                Script2d = "_Reviewer'";
+                Script2d = "Reviewer";
                 textBox3.Text = generateStringDistGroup();
+                textBox4.Text = generateAddPermission();
             }
         }
 
@@ -381,6 +399,11 @@ namespace SharedMailboxes
         private void button3_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(textBox3.Text);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(textBox4.Text);
         }
     }
 }
