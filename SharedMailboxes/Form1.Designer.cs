@@ -170,6 +170,7 @@
             this.radioButton30.TabStop = true;
             this.radioButton30.Text = "GS";
             this.radioButton30.UseVisualStyleBackColor = true;
+            this.radioButton30.CheckedChanged += new System.EventHandler(this.radioButton30_CheckedChanged);
             // 
             // radioButton29
             // 
@@ -181,6 +182,7 @@
             this.radioButton29.TabStop = true;
             this.radioButton29.Text = "ABW Wtb";
             this.radioButton29.UseVisualStyleBackColor = true;
+            this.radioButton29.CheckedChanged += new System.EventHandler(this.radioButton29_CheckedChanged);
             // 
             // radioButton28
             // 
@@ -192,6 +194,7 @@
             this.radioButton28.TabStop = true;
             this.radioButton28.Text = "ABW Bri";
             this.radioButton28.UseVisualStyleBackColor = true;
+            this.radioButton28.CheckedChanged += new System.EventHandler(this.radioButton28_CheckedChanged);
             // 
             // radioButton27
             // 
@@ -203,6 +206,7 @@
             this.radioButton27.TabStop = true;
             this.radioButton27.Text = "MKK BW";
             this.radioButton27.UseVisualStyleBackColor = true;
+            this.radioButton27.CheckedChanged += new System.EventHandler(this.radioButton27_CheckedChanged);
             // 
             // radioButton26
             // 
@@ -214,6 +218,7 @@
             this.radioButton26.TabStop = true;
             this.radioButton26.Text = "MKK Wtb";
             this.radioButton26.UseVisualStyleBackColor = true;
+            this.radioButton26.CheckedChanged += new System.EventHandler(this.radioButton26_CheckedChanged);
             // 
             // radioButton25
             // 
@@ -225,6 +230,7 @@
             this.radioButton25.TabStop = true;
             this.radioButton25.Text = "HNR";
             this.radioButton25.UseVisualStyleBackColor = true;
+            this.radioButton25.CheckedChanged += new System.EventHandler(this.radioButton25_CheckedChanged);
             // 
             // radioButton24
             // 
@@ -236,6 +242,7 @@
             this.radioButton24.TabStop = true;
             this.radioButton24.Text = "StJ";
             this.radioButton24.UseVisualStyleBackColor = true;
+            this.radioButton24.CheckedChanged += new System.EventHandler(this.radioButton24_CheckedChanged);
             // 
             // radioButton23
             // 
@@ -247,6 +254,7 @@
             this.radioButton23.TabStop = true;
             this.radioButton23.Text = "StE";
             this.radioButton23.UseVisualStyleBackColor = true;
+            this.radioButton23.CheckedChanged += new System.EventHandler(this.radioButton23_CheckedChanged);
             // 
             // radioButton22
             // 
@@ -258,6 +266,7 @@
             this.radioButton22.TabStop = true;
             this.radioButton22.Text = "TPH";
             this.radioButton22.UseVisualStyleBackColor = true;
+            this.radioButton22.CheckedChanged += new System.EventHandler(this.radioButton22_CheckedChanged);
             // 
             // radioButton21
             // 
@@ -269,6 +278,7 @@
             this.radioButton21.TabStop = true;
             this.radioButton21.Text = "Soz. Mdb";
             this.radioButton21.UseVisualStyleBackColor = true;
+            this.radioButton21.CheckedChanged += new System.EventHandler(this.radioButton21_CheckedChanged);
             // 
             // radioButton20
             // 
@@ -280,6 +290,7 @@
             this.radioButton20.TabStop = true;
             this.radioButton20.Text = "Soz. Hlb";
             this.radioButton20.UseVisualStyleBackColor = true;
+            this.radioButton20.CheckedChanged += new System.EventHandler(this.radioButton20_CheckedChanged);
             // 
             // radioButton19
             // 
@@ -291,6 +302,7 @@
             this.radioButton19.TabStop = true;
             this.radioButton19.Text = "Soz. Wtb";
             this.radioButton19.UseVisualStyleBackColor = true;
+            this.radioButton19.CheckedChanged += new System.EventHandler(this.radioButton19_CheckedChanged);
             // 
             // radioButton18
             // 
@@ -302,6 +314,7 @@
             this.radioButton18.TabStop = true;
             this.radioButton18.Text = "Soz. Olb";
             this.radioButton18.UseVisualStyleBackColor = true;
+            this.radioButton18.CheckedChanged += new System.EventHandler(this.radioButton18_CheckedChanged);
             // 
             // radioButton17
             // 
@@ -313,6 +326,7 @@
             this.radioButton17.TabStop = true;
             this.radioButton17.Text = "Soz. Msb";
             this.radioButton17.UseVisualStyleBackColor = true;
+            this.radioButton17.CheckedChanged += new System.EventHandler(this.radioButton17_CheckedChanged);
             // 
             // radioButton16
             // 
@@ -324,6 +338,7 @@
             this.radioButton16.TabStop = true;
             this.radioButton16.Text = "Soz. Bri";
             this.radioButton16.UseVisualStyleBackColor = true;
+            this.radioButton16.CheckedChanged += new System.EventHandler(this.radioButton16_CheckedChanged);
             // 
             // radioButton15
             // 
@@ -335,6 +350,7 @@
             this.radioButton15.TabStop = true;
             this.radioButton15.Text = "WH HN";
             this.radioButton15.UseVisualStyleBackColor = true;
+            this.radioButton15.CheckedChanged += new System.EventHandler(this.radioButton15_CheckedChanged);
             // 
             // radioButton14
             // 
@@ -346,6 +362,7 @@
             this.radioButton14.TabStop = true;
             this.radioButton14.Text = "WH LH";
             this.radioButton14.UseVisualStyleBackColor = true;
+            this.radioButton14.CheckedChanged += new System.EventHandler(this.radioButton14_CheckedChanged);
             // 
             // radioButton13
             // 
@@ -357,6 +374,7 @@
             this.radioButton13.TabStop = true;
             this.radioButton13.Text = "WH DEH";
             this.radioButton13.UseVisualStyleBackColor = true;
+            this.radioButton13.CheckedChanged += new System.EventHandler(this.radioButton13_CheckedChanged);
             // 
             // radioButton12
             // 
@@ -368,6 +386,7 @@
             this.radioButton12.TabStop = true;
             this.radioButton12.Text = "WH NH";
             this.radioButton12.UseVisualStyleBackColor = true;
+            this.radioButton12.CheckedChanged += new System.EventHandler(this.radioButton12_CheckedChanged);
             // 
             // radioButton11
             // 
@@ -379,6 +398,7 @@
             this.radioButton11.TabStop = true;
             this.radioButton11.Text = "WH EH";
             this.radioButton11.UseVisualStyleBackColor = true;
+            this.radioButton11.CheckedChanged += new System.EventHandler(this.radioButton11_CheckedChanged);
             // 
             // radioButton10
             // 
@@ -390,6 +410,7 @@
             this.radioButton10.TabStop = true;
             this.radioButton10.Text = "WH HH";
             this.radioButton10.UseVisualStyleBackColor = true;
+            this.radioButton10.CheckedChanged += new System.EventHandler(this.radioButton10_CheckedChanged);
             // 
             // radioButton9
             // 
@@ -401,6 +422,7 @@
             this.radioButton9.TabStop = true;
             this.radioButton9.Text = "WfbM Winterberg";
             this.radioButton9.UseVisualStyleBackColor = true;
+            this.radioButton9.CheckedChanged += new System.EventHandler(this.radioButton9_CheckedChanged);
             // 
             // radioButton8
             // 
@@ -412,6 +434,7 @@
             this.radioButton8.TabStop = true;
             this.radioButton8.Text = "WfbM Marsberg";
             this.radioButton8.UseVisualStyleBackColor = true;
+            this.radioButton8.CheckedChanged += new System.EventHandler(this.radioButton8_CheckedChanged);
             // 
             // radioButton7
             // 
@@ -423,6 +446,7 @@
             this.radioButton7.TabStop = true;
             this.radioButton7.Text = "WfbM IDL2";
             this.radioButton7.UseVisualStyleBackColor = true;
+            this.radioButton7.CheckedChanged += new System.EventHandler(this.radioButton7_CheckedChanged);
             // 
             // radioButton6
             // 
@@ -434,6 +458,7 @@
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "WfbM IDL1";
             this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
             // 
             // radioButton5
             // 
@@ -445,6 +470,7 @@
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "WfbM HG";
             this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
             // radioButton4
             // 
@@ -457,6 +483,7 @@
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "WfbM MW";
             this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // label1
             // 
