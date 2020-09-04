@@ -63,6 +63,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.radioButton33 = new System.Windows.Forms.RadioButton();
+            this.radioButton32 = new System.Windows.Forms.RadioButton();
+            this.radioButton31 = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -70,9 +73,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.radioButton31 = new System.Windows.Forms.RadioButton();
-            this.radioButton32 = new System.Windows.Forms.RadioButton();
-            this.radioButton33 = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -517,6 +517,42 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Freigabegruppen erstellen";
             // 
+            // radioButton33
+            // 
+            this.radioButton33.AutoSize = true;
+            this.radioButton33.Location = new System.Drawing.Point(140, 20);
+            this.radioButton33.Name = "radioButton33";
+            this.radioButton33.Size = new System.Drawing.Size(70, 17);
+            this.radioButton33.TabIndex = 2;
+            this.radioButton33.TabStop = true;
+            this.radioButton33.Text = "Reviewer";
+            this.radioButton33.UseVisualStyleBackColor = true;
+            this.radioButton33.CheckedChanged += new System.EventHandler(this.radioButton33_CheckedChanged);
+            // 
+            // radioButton32
+            // 
+            this.radioButton32.AutoSize = true;
+            this.radioButton32.Location = new System.Drawing.Point(72, 20);
+            this.radioButton32.Name = "radioButton32";
+            this.radioButton32.Size = new System.Drawing.Size(52, 17);
+            this.radioButton32.TabIndex = 1;
+            this.radioButton32.TabStop = true;
+            this.radioButton32.Text = "Editor";
+            this.radioButton32.UseVisualStyleBackColor = true;
+            this.radioButton32.CheckedChanged += new System.EventHandler(this.radioButton32_CheckedChanged);
+            // 
+            // radioButton31
+            // 
+            this.radioButton31.AutoSize = true;
+            this.radioButton31.Location = new System.Drawing.Point(7, 20);
+            this.radioButton31.Name = "radioButton31";
+            this.radioButton31.Size = new System.Drawing.Size(50, 17);
+            this.radioButton31.TabIndex = 0;
+            this.radioButton31.TabStop = true;
+            this.radioButton31.Text = "Autor";
+            this.radioButton31.UseVisualStyleBackColor = true;
+            this.radioButton31.CheckedChanged += new System.EventHandler(this.radioButton31_CheckedChanged);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -530,10 +566,11 @@
             // 
             this.button1.Location = new System.Drawing.Point(12, 260);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 23);
+            this.button1.Size = new System.Drawing.Size(124, 23);
             this.button1.TabIndex = 9;
-            this.button1.Text = "Jetzt ausführen";
+            this.button1.Text = "In Zwischenablage";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -576,46 +613,11 @@
             // 
             this.button3.Location = new System.Drawing.Point(12, 412);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 23);
+            this.button3.Size = new System.Drawing.Size(124, 23);
             this.button3.TabIndex = 14;
-            this.button3.Text = "Jetzt ausführen";
+            this.button3.Text = "In Zwischenablage";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton31
-            // 
-            this.radioButton31.AutoSize = true;
-            this.radioButton31.Location = new System.Drawing.Point(7, 20);
-            this.radioButton31.Name = "radioButton31";
-            this.radioButton31.Size = new System.Drawing.Size(50, 17);
-            this.radioButton31.TabIndex = 0;
-            this.radioButton31.TabStop = true;
-            this.radioButton31.Text = "Autor";
-            this.radioButton31.UseVisualStyleBackColor = true;
-            this.radioButton31.CheckedChanged += new System.EventHandler(this.radioButton31_CheckedChanged);
-            // 
-            // radioButton32
-            // 
-            this.radioButton32.AutoSize = true;
-            this.radioButton32.Location = new System.Drawing.Point(72, 20);
-            this.radioButton32.Name = "radioButton32";
-            this.radioButton32.Size = new System.Drawing.Size(52, 17);
-            this.radioButton32.TabIndex = 1;
-            this.radioButton32.TabStop = true;
-            this.radioButton32.Text = "Editor";
-            this.radioButton32.UseVisualStyleBackColor = true;
-            this.radioButton32.CheckedChanged += new System.EventHandler(this.radioButton32_CheckedChanged);
-            // 
-            // radioButton33
-            // 
-            this.radioButton33.AutoSize = true;
-            this.radioButton33.Location = new System.Drawing.Point(140, 20);
-            this.radioButton33.Name = "radioButton33";
-            this.radioButton33.Size = new System.Drawing.Size(70, 17);
-            this.radioButton33.TabIndex = 2;
-            this.radioButton33.TabStop = true;
-            this.radioButton33.Text = "Reviewer";
-            this.radioButton33.UseVisualStyleBackColor = true;
-            this.radioButton33.CheckedChanged += new System.EventHandler(this.radioButton33_CheckedChanged);
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 

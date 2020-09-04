@@ -372,5 +372,15 @@ namespace SharedMailboxes
                 textBox3.Text = generateStringDistGroup();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(textBox2.Text);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(textBox3.Text);
+        }
     }
 }
