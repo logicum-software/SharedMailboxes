@@ -52,8 +52,8 @@ namespace SharedMailboxes
             }
             
             return Script1a + Script1b + Script1c + textBox1.Text + "'" + Script1d + Script1c + textBox1.Text +
-                "'" + Script1e + Script1f + Script1g + Script1c + textBox1.Text + "@caritas-brilon-wfb.de'" +
-                "-SamAccountName '" + Script1c + textBox1.Text + "' -FirstName '' -Initials '' -LastName '' " +
+                "'" + Script1e + Script1f + Script1g + textBox1.Text + "@caritas-brilon-wfb.de'" +
+                "-SamAccountName '" + textBox1.Text + "' -FirstName '' -Initials '' -LastName '' " +
                 "-Database '" + Script1h + Script1i;
         }
 
