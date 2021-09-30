@@ -10,7 +10,7 @@ namespace SharedMailboxes
         private String Script1a = "New-Mailbox -Name '";
         private String Script1b = "Raum ";
         private String Script1c = "WfbM-MW_";
-        private String Script1d = " Alias '";
+        private String Script1d = " -Alias '";
         private String Script1e = " -OrganizationalUnit ";
         private String Script1f = "'caritas-brilon-wfb.de/03_User/74_Raumpostfach_Raumkalender'";
         private String Script1g = " -UserPrincipalName '";
