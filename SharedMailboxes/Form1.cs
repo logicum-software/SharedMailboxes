@@ -14,7 +14,7 @@ namespace SharedMailboxes
         private String Script1e = " -OrganizationalUnit ";
         private String Script1f = "'caritas-brilon-wfb.de/03_User/74_Raumpostfach_Raumkalender'";
         private String Script1g = " -UserPrincipalName '";
-        private String Script1h = "MBDB_EX2014_L-Z' ";
+        private String Script1h = "MBDB_EX2020_L-Z' ";
         private String Script1i = "-Room";
 
         // Script2 -> Erstellung der Freigabegruppen
@@ -82,7 +82,7 @@ namespace SharedMailboxes
             {
                 Script1b = "Fzg-";
                 Script1f = "'caritas-brilon-wfb.de/03_User/75_Geraetepostfaecher'";
-                Script1h = "MBDB_EX2014_A-K' ";
+                Script1h = "MBDB_EX2020_A-K' ";
                 Script1i = "-Equipment";
                 Script2b = "EFg_Fzg_";
                 textBox2.Text = generateStringMailbox();
@@ -95,7 +95,7 @@ namespace SharedMailboxes
             {
                 Script1b = "Raum ";
                 Script1f = "'caritas-brilon-wfb.de/03_User/74_Raumpostfach_Raumkalender'";
-                Script1h = "MBDB_EX2014_L-Z' ";
+                Script1h = "MBDB_EX2020_L-Z' ";
                 Script1i = "-Room";
                 Script2b = "EFg_Raum-";
                 textBox2.Text = generateStringMailbox();
@@ -108,7 +108,7 @@ namespace SharedMailboxes
             {
                 Script1b = "Kalender ";
                 Script1f = "'caritas-brilon-wfb.de/03_User/75_Geraetepostfaecher'";
-                Script1h = "MBDB_EX2014_A-K' ";
+                Script1h = "MBDB_EX2020_A-K' ";
                 Script1i = "-Equipment";
                 Script2b = "EFg_Kalender_";
                 textBox2.Text = generateStringMailbox();
